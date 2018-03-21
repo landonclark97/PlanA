@@ -14,5 +14,8 @@ namespace PlanA
     [Register ("JoinedEventsController")]
     partial class JoinedEventsController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

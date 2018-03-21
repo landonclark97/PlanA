@@ -14,5 +14,8 @@ namespace PlanA
     [Register ("MyEventsController")]
     partial class MyEventsController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="202">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="201">
+            <objects>
+                <viewController id="202" sceneMemberID="viewController" customClass="LoginController" storyboardIdentifier="LoginController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="199"/>
+                        <viewControllerLayoutGuide type="bottom" id="200"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="203">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="209" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="UsernameText" placeholder="Username">
+                                <rect key="frame" x="80" y="189" width="257" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="213" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="PasswordText" placeholder="Password">
+                                <rect key="frame" x="80" y="285" width="257" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="217" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="SubmitButton">
+                                <rect key="frame" x="168" y="340" width="78" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <segue id="943" destination="896" kind="show" identifier="SegueToHomepage"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="221" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="PlanATitle" usesAttributedText="YES">
+                                <rect key="frame" x="132" y="61" width="151" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="PlanA">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.086274509803921567" green="0.086274509803921567" blue="0.10980392156862745" alpha="1"/>
+                                            <font key="NSFont" name="Avenir-Black" family="Avenir" size="47"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error: username and password combination invalid." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="225" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="2" hidden="YES" restorationIdentifier="ErrorLabel">
+                                <rect key="frame" x="80" y="497" width="255" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Valid Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4766" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="UsernameLabel">
+                                <rect key="frame" x="116" y="145" width="184" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Password Here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4783" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="PasswordLabel">
+                                <rect key="frame" x="116" y="246" width="183" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6454" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="CreateAccountButton">
+                                <rect key="frame" x="120" y="399" width="176" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="CreateAccountButton_TouchUpInside:" destination="202" id="6712" eventType="touchUpInside"/>
+                                    <segue id="6919" destination="2893" kind="show" identifier="SegueToCA"/>
+                                </connections>
+                                <state key="normal" title="Create New Account"/>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="SubmitButton" destination="217" id="name-outlet-217"/>
+                        <outlet property="ErrorLabel" destination="225" id="name-outlet-225"/>
+                        <outlet property="UsernameText" destination="209" id="name-outlet-209"/>
+                        <outlet property="PasswordText" destination="213" id="name-outlet-213"/>
+                        <outlet property="PlanATitle" destination="221" id="name-outlet-221"/>
+                        <outlet property="UsernameLabel" destination="4766" id="name-outlet-4766"/>
+                        <outlet property="PasswordLabel" destination="4783" id="name-outlet-4783"/>
+                        <outlet property="CreateAccountButton" destination="6454" id="name-outlet-6454"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="204" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="-133"/>
+        </scene>
+        <scene sceneID="895">
+            <objects>
+                <viewControllerPlaceholder id="896" sceneMemberID="viewController" storyboardName="TabController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="897" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="678" y="78"/>
+        </scene>
+        <scene sceneID="2892">
+            <objects>
+                <viewController id="2893" sceneMemberID="viewController" customClass="AccountCreationController" storyboardIdentifier="AccountCreationController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2890"/>
+                        <viewControllerLayoutGuide type="bottom" id="2891"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2894">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3143" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="PlanATitle" usesAttributedText="YES">
+                                <rect key="frame" x="132" y="61" width="151" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="PlanA">
+                                        <attributes>
+                                            <color key="NSColor" colorSpace="calibratedRGB" red="0.086274509803921567" green="0.086274509803921567" blue="0.10980392156862745" alpha="1"/>
+                                            <font key="NSFont" name="Avenir-Black" family="Avenir" size="47"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Your Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3152" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="2" restorationIdentifier="CALabel">
+                                <rect key="frame" x="129" y="133" width="156" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="17"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="0" green="0" blue="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3257" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="NewUsernameText" placeholder="Enter Username">
+                                <rect key="frame" x="81" y="310" width="268" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3266" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="NewPasswordText" placeholder="Enter Password">
+                                <rect key="frame" x="81" y="418" width="268" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Valid Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3299" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="UsernameLabel">
+                                <rect key="frame" x="113" y="264" width="184" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Password Here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3308" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="113" y="374" width="183" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Enter Password Here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4221" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="ReEnterPasswordLabel">
+                                <rect key="frame" x="102" y="479" width="206" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="4334" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Re-Enter Password" restorationIdentifier="NewRePasswordText">
+                                <rect key="frame" x="81" y="521" width="268" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4856" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="CreateButton">
+                                <rect key="frame" x="163" y="568" width="84" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue id="5025" destination="202" kind="show" identifier="SegueToLogin"/>
+                                </connections>
+                                <state key="normal" title="Create"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passwords do not match." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9447" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" numberOfLines="2" hidden="YES" restorationIdentifier="ErrorLabel">
+                                <rect key="frame" x="81" y="631" width="238" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="CALabel" destination="3152" id="name-outlet-3152"/>
+                        <outlet property="PlanATitle" destination="3143" id="name-outlet-3143"/>
+                        <outlet property="UsernameLabel" destination="3299" id="name-outlet-3299"/>
+                        <outlet property="NewUsernameText" destination="3257" id="name-outlet-3257"/>
+                        <outlet property="ReEnterPasswordLabel" destination="4221" id="name-outlet-4221"/>
+                        <outlet property="NewRePasswordText" destination="4334" id="name-outlet-4334"/>
+                        <outlet property="CreateButton" destination="4856" id="name-outlet-4856"/>
+                        <outlet property="NewPasswordText" destination="3266" id="name-outlet-3266"/>
+                        <outlet property="ErrorLabel" destination="9447" id="name-outlet-9447"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2895" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="180"/>
+        </scene>
+    </scenes>
+</document>

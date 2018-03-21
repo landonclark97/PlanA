@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="TabController.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
@@ -104,13 +105,21 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="FirstViewController.cs" />
-    <Compile Include="SecondViewController.cs" />
-    <Compile Include="FirstViewController.designer.cs">
-      <DependentUpon>FirstViewController.cs</DependentUpon>
+    <Compile Include="JoinedEventsController.cs" />
+    <Compile Include="JoinedEventsController.designer.cs">
+      <DependentUpon>JoinedEventsController.cs</DependentUpon>
     </Compile>
-    <Compile Include="SecondViewController.designer.cs">
-      <DependentUpon>SecondViewController.cs</DependentUpon>
+    <Compile Include="LoginController.cs" />
+    <Compile Include="LoginController.designer.cs">
+      <DependentUpon>LoginController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyEventsController.cs" />
+    <Compile Include="MyEventsController.designer.cs">
+      <DependentUpon>MyEventsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountCreationController.cs" />
+    <Compile Include="AccountCreationController.designer.cs">
+      <DependentUpon>AccountCreationController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

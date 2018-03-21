@@ -10,17 +10,18 @@ namespace PlanA
     {
         // class-level declarations
 
-        public override UIWindow Window
-        {
-            get;
-            set;
-        }
+        UIWindow window;
+        public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
+        public static UIViewController initialViewController;
 
-        public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            // Override point for customization after application launch.
-            // If not required for your application you can safely delete this method
+            window = new UIWindow(UIScreen.MainScreen.Bounds);
 
+            initialViewController = Storyboard.InstantiateInitialViewController() as UIViewController;
+
+            window.RootViewController = initialViewController;
+            window.MakeKeyAndVisible();
             return true;
         }
 
