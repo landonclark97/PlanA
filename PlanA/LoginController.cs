@@ -1,6 +1,8 @@
 using Foundation;
 using System;
 using UIKit;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PlanA
 {
@@ -16,17 +18,31 @@ namespace PlanA
             
         }
 
+
         public override bool ShouldPerformSegue(string segueIdentifier, NSObject sender)
         {
 
             if (segueIdentifier == "SegueToHomepage")
             {
-                if ((PasswordText.Text == "password") && (UsernameText.Text == "username"))
+                if ((PasswordText.Text.Length > 0) && (UsernameText.Text.Length > 0))
                 {
                     PasswordText.ResignFirstResponder();
                     UsernameText.ResignFirstResponder();
 
+                    /*var username = UsernameText.Text;
+                    var password = PasswordText.Text;
+
+                    Dictionary<string, string> loginCred = new Dictionary<string, string>
+                    {
+                        {"username", username},
+                        {"password", password}
+                    };
+
+                    string result = AppDelegate.client.POST("account", "login", loginCred).Result;
+
+                    PasswordText.Text = result;*/
                     return true;
+
                 }
                 else
                 {

@@ -81,6 +81,10 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -101,6 +105,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -121,6 +126,12 @@
     <Compile Include="AccountCreationController.designer.cs">
       <DependentUpon>AccountCreationController.cs</DependentUpon>
     </Compile>
+    <Compile Include="HTTPRequestReciever.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Timeslot.cs" />
+    <Compile Include="MessageBoard.cs" />
+    <Compile Include="Message.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

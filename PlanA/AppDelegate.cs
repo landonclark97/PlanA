@@ -9,6 +9,7 @@ namespace PlanA
     public class AppDelegate : UIApplicationDelegate
     {
         // class-level declarations
+        public static HTTPRequestReciever client = new HTTPRequestReciever("http://127.0.0.1:1234");
 
         UIWindow window;
         public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);
@@ -22,6 +23,7 @@ namespace PlanA
 
             window.RootViewController = initialViewController;
             window.MakeKeyAndVisible();
+
             return true;
         }
 
@@ -57,4 +59,3 @@ namespace PlanA
         }
     }
 }
-
