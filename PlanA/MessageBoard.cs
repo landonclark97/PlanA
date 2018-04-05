@@ -5,7 +5,7 @@ namespace PlanA
 {
     public class MessageBoard
     {
-        int ID;
+        int ID { get; set; }
         IList<Message> Messages { get; set; }
 
         public void AddMessage(Message newMessage)

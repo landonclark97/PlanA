@@ -9,7 +9,8 @@ namespace PlanA
     public class AppDelegate : UIApplicationDelegate
     {
         // class-level declarations
-        public static HTTPRequestReciever client = new HTTPRequestReciever("http://127.0.0.1:1234");
+
+        public static SQLHandler sqlHandler = new SQLHandler("applicationdatabase.crzemhmmicsu.us-east-2.rds.amazonaws.com", "3306", "PlanA", "planA", "shalyssa");
 
         UIWindow window;
         public static UIStoryboard Storyboard = UIStoryboard.FromName("Main", null);

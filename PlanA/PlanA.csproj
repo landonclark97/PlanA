@@ -82,9 +82,12 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="MySql.Data.CF">
+      <HintPath>..\..\..\..\..\Downloads\MySQL-Plugin-1.0\lib\ios\MySql.Data.CF.dll</HintPath>
     </Reference>
+    <Reference Include="I18N" />
+    <Reference Include="I18N.West" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -105,33 +108,32 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="JoinedEventsController.cs" />
-    <Compile Include="JoinedEventsController.designer.cs">
-      <DependentUpon>JoinedEventsController.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginController.cs" />
     <Compile Include="LoginController.designer.cs">
       <DependentUpon>LoginController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MyEventsController.cs" />
-    <Compile Include="MyEventsController.designer.cs">
-      <DependentUpon>MyEventsController.cs</DependentUpon>
     </Compile>
     <Compile Include="AccountCreationController.cs" />
     <Compile Include="AccountCreationController.designer.cs">
       <DependentUpon>AccountCreationController.cs</DependentUpon>
     </Compile>
-    <Compile Include="HTTPRequestReciever.cs" />
+    <Compile Include="SQLHandler.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Timeslot.cs" />
     <Compile Include="MessageBoard.cs" />
     <Compile Include="Message.cs" />
+    <Compile Include="HomeController.cs" />
+    <Compile Include="HomeController.designer.cs">
+      <DependentUpon>HomeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventsController.cs" />
+    <Compile Include="EventsController.designer.cs">
+      <DependentUpon>EventsController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

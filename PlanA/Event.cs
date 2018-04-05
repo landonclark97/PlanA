@@ -10,9 +10,9 @@ namespace PlanA
         string Description { get; set; }
         User Creator { get; set; }
         MessageBoard Messages { get; set; }
-        IList<string> Tags;
-        IList<User> Participants;
-        IList<Timeslot> Timeslots;
+        IList<string> Tags { get; set; }
+        IList<User> Participants { get; set; }
+        IList<Timeslot> Timeslots { get; set; }
 
         public void AddTag(string tag)
         {

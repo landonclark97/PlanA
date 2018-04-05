@@ -9,10 +9,10 @@ namespace PlanA
         string Username { get; set; }
         string Email { get; set; }
         string Password { get; set; }
-        IList<User> Friends;
-        IList<User> AddedBy;
-        IList<Event> CreatedEvents;
-        IList<Event> JoinedEvents;
+        IList<User> Friends { get; set; }
+        IList<User> AddedBy { get; set; }
+        IList<Event> CreatedEvents { get; set; }
+        IList<Event> JoinedEvents { get; set; }
 
         public void AddFriend(User friend)
         {
