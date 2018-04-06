@@ -24,15 +24,39 @@ namespace PlanA
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel EmailLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField EmailText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel EnterPasswordLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel ErrorLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField NewPasswordText { get; set; }
+        UIKit.UILabel FirstNameLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField NewRePasswordText { get; set; }
+        UIKit.UITextField FirstNameText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel LastNameLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField LastNameText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField NewPasswordText { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -41,10 +65,6 @@ namespace PlanA
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel PlanATitle { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel ReEnterPasswordLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -62,19 +82,49 @@ namespace PlanA
                 CreateButton = null;
             }
 
+            if (EmailLabel != null) {
+                EmailLabel.Dispose ();
+                EmailLabel = null;
+            }
+
+            if (EmailText != null) {
+                EmailText.Dispose ();
+                EmailText = null;
+            }
+
+            if (EnterPasswordLabel != null) {
+                EnterPasswordLabel.Dispose ();
+                EnterPasswordLabel = null;
+            }
+
             if (ErrorLabel != null) {
                 ErrorLabel.Dispose ();
                 ErrorLabel = null;
             }
 
+            if (FirstNameLabel != null) {
+                FirstNameLabel.Dispose ();
+                FirstNameLabel = null;
+            }
+
+            if (FirstNameText != null) {
+                FirstNameText.Dispose ();
+                FirstNameText = null;
+            }
+
+            if (LastNameLabel != null) {
+                LastNameLabel.Dispose ();
+                LastNameLabel = null;
+            }
+
+            if (LastNameText != null) {
+                LastNameText.Dispose ();
+                LastNameText = null;
+            }
+
             if (NewPasswordText != null) {
                 NewPasswordText.Dispose ();
                 NewPasswordText = null;
-            }
-
-            if (NewRePasswordText != null) {
-                NewRePasswordText.Dispose ();
-                NewRePasswordText = null;
             }
 
             if (NewUsernameText != null) {
@@ -85,11 +135,6 @@ namespace PlanA
             if (PlanATitle != null) {
                 PlanATitle.Dispose ();
                 PlanATitle = null;
-            }
-
-            if (ReEnterPasswordLabel != null) {
-                ReEnterPasswordLabel.Dispose ();
-                ReEnterPasswordLabel = null;
             }
 
             if (UsernameLabel != null) {

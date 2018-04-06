@@ -134,6 +134,11 @@
     <Compile Include="EventsController.designer.cs">
       <DependentUpon>EventsController.cs</DependentUpon>
     </Compile>
+    <Compile Include="EventsTableSource.cs" />
+    <Compile Include="EventsTableView.cs" />
+    <Compile Include="EventsTableView.designer.cs">
+      <DependentUpon>EventsTableView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

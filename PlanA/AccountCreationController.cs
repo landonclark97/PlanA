@@ -14,18 +14,26 @@ namespace PlanA
         {
             if(segueIdentifier == "SegueToLogin")
             {
-                if (NewPasswordText.Text != NewRePasswordText.Text)
+                var fn = FirstNameText.Text;
+                var ln = LastNameText.Text;
+                var un = NewUsernameText.Text;
+                var pw = NewPasswordText.Text;
+                var email = EmailText.Text;
+
+                if (AppDelegate.sqlHandler.CreateAccount(un, pw, email, fn, ln))
                 {
-                    ErrorLabel.Hidden = false;
-                    return false;
+                    FirstNameText.ResignFirstResponder();
+                    LastNameText.ResignFirstResponder();
+                    NewUsernameText.ResignFirstResponder();
+                    NewPasswordText.ResignFirstResponder();
+                    EmailText.ResignFirstResponder();
+
+                    return true;
                 }
                 else
                 {
-                    NewRePasswordText.ResignFirstResponder();
-                    NewPasswordText.ResignFirstResponder();
-                    NewUsernameText.ResignFirstResponder();
-
-                    return true;
+                    ErrorLabel.Hidden = false;
+                    return false;
                 }
             }
 

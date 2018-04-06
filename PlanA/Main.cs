@@ -1,5 +1,4 @@
 ﻿using UIKit;
-using System.Net.Http;
 
 namespace PlanA
 {

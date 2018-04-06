@@ -1,14 +1,19 @@
 ﻿using System.Collections.Generic;
+using System;
 
 namespace PlanA
 {
     public class Event
     {
-        string Name { get; set; }
-        int ID { get; set; }
+        string Username { get; set; }
+        string EventName { get; set; }
+        int EventID { get; set; }
         string Location { get; set; }
         string Description { get; set; }
-        User Creator { get; set; }
+        DateTime Datetime { get; set; }
+
+
+        /*User Creator { get; set; }
         MessageBoard Messages { get; set; }
         IList<string> Tags { get; set; }
         IList<User> Participants { get; set; }
@@ -42,6 +47,6 @@ namespace PlanA
         public bool RemoveTimeslot(Timeslot ts)
         {
             return Timeslots.Remove(ts);
-        }
+        }*/
     }
 }

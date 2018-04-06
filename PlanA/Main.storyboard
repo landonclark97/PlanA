@@ -146,42 +146,42 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3257" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="NewUsernameText" placeholder="Enter Username">
-                                <rect key="frame" x="81" y="310" width="268" height="30"/>
+                                <rect key="frame" x="66" y="395" width="268" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3266" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="NewPasswordText" placeholder="Enter Password">
-                                <rect key="frame" x="81" y="418" width="268" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="3266" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Enter Email" restorationIdentifier="EmailText">
+                                <rect key="frame" x="71" y="469" width="268" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Valid Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3299" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="UsernameLabel">
-                                <rect key="frame" x="113" y="264" width="184" height="21"/>
+                                <rect key="frame" x="108" y="358" width="184" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Password Here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3308" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="113" y="374" width="183" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3308" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="EmailLabel">
+                                <rect key="frame" x="108" y="440" width="183" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Enter Password Here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4221" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="ReEnterPasswordLabel">
-                                <rect key="frame" x="102" y="479" width="206" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Password Here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4221" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="EnterPasswordLabel">
+                                <rect key="frame" x="97" y="507" width="206" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="4334" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Re-Enter Password" restorationIdentifier="NewRePasswordText">
-                                <rect key="frame" x="81" y="521" width="268" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="4334" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="NewPasswordText" placeholder="Enter Password">
+                                <rect key="frame" x="71" y="536" width="268" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -202,6 +202,34 @@
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="0" blue="0" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="11151" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="FirstNameLabel">
+                                <rect key="frame" x="126" y="209" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="11192" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" customModule="FirstNameText" restorationIdentifier="FirstNameText" placeholder="Enter First Name">
+                                <rect key="frame" x="66" y="238" width="268" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Last Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="11377" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="LastNameLabel">
+                                <rect key="frame" x="126" y="285" width="148" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="11458" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="LastNameText" placeholder="Enter Last Name">
+                                <rect key="frame" x="66" y="314" width="268" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
@@ -209,11 +237,16 @@
                         <outlet property="PlanATitle" destination="3143" id="name-outlet-3143"/>
                         <outlet property="UsernameLabel" destination="3299" id="name-outlet-3299"/>
                         <outlet property="NewUsernameText" destination="3257" id="name-outlet-3257"/>
-                        <outlet property="ReEnterPasswordLabel" destination="4221" id="name-outlet-4221"/>
-                        <outlet property="NewRePasswordText" destination="4334" id="name-outlet-4334"/>
+                        <outlet property="EnterPasswordLabel" destination="4221" id="name-outlet-4221"/>
+                        <outlet property="NewPasswordText" destination="4334" id="name-outlet-4334"/>
                         <outlet property="CreateButton" destination="4856" id="name-outlet-4856"/>
-                        <outlet property="NewPasswordText" destination="3266" id="name-outlet-3266"/>
                         <outlet property="ErrorLabel" destination="9447" id="name-outlet-9447"/>
+                        <outlet property="FirstNameText" destination="11192" id="name-outlet-11192"/>
+                        <outlet property="LastNameLabel" destination="11377" id="name-outlet-11377"/>
+                        <outlet property="FirstNameLabel" destination="11151" id="name-outlet-11151"/>
+                        <outlet property="LastNameText" destination="11458" id="name-outlet-11458"/>
+                        <outlet property="EmailText" destination="3266" id="name-outlet-3266"/>
+                        <outlet property="EmailLabel" destination="3308" id="name-outlet-3308"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2895" userLabel="First Responder" sceneMemberID="firstResponder"/>

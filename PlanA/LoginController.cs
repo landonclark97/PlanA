@@ -21,17 +21,16 @@ namespace PlanA
         {
             if (segueIdentifier == "SegueToHomepage")
             {
-                if ((PasswordText.Text.Length > 0) && (UsernameText.Text.Length > 0))
+                string username = UsernameText.Text;
+                string password = PasswordText.Text;
+
+                if (AppDelegate.sqlHandler.GetLogin(username, password))
                 {
                     PasswordText.ResignFirstResponder();
                     UsernameText.ResignFirstResponder();
 
-                    string username = UsernameText.Text;
-                    string password = PasswordText.Text;
 
-                    AppDelegate.sqlHandler.GetLogin(username, password);
-
-                    return false;
+                    return true;
 
                 }
                 else

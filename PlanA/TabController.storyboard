@@ -37,7 +37,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5551" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-106" y="241"/>
+            <point key="canvasLocation" x="-128" y="238"/>
         </scene>
         <scene sceneID="5589">
             <objects>
@@ -59,7 +59,7 @@
         <scene sceneID="5875">
             <objects>
                 <tableViewController id="5876" sceneMemberID="viewController" customClass="EventsController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5877">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5877" restorationIdentifier="EventsTableView" customClass="EventsTableView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,6 +70,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5880" id="5881">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -79,6 +80,9 @@
                         </connections>
                     </tableView>
                     <navigationItem title="Events" id="6264" key="navigationItem"/>
+                    <connections>
+                        <outlet property="EventsTableView" destination="5877" id="name-outlet-5877"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5882" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,7 +91,7 @@
         <scene sceneID="5948">
             <objects>
                 <tableViewController id="5949" sceneMemberID="viewController" customClass="HomeController" storyboardIdentifier="HomeController" useStoryboardIdentifierAsRestorationIdentifier="YES">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5950">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5950" restorationIdentifier="HomeTableView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,6 +111,9 @@
                         </connections>
                     </tableView>
                     <navigationItem title="Home" id="6198" key="navigationItem"/>
+                    <connections>
+                        <outlet property="HomeTableView" destination="5950" id="name-outlet-5950"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5955" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
