@@ -27,7 +27,7 @@ namespace PlanATests
         public void CreateAccountPass()
         {
             SQLHandler sqlHandler = new SQLHandler("applicationdatabase.crzemhmmicsu.us-east-2.rds.amazonaws.com", "3306", "PlanA", "planA", "shalyssa");
-            Assert.True(sqlHandler.CreateAccount("Joe", "Dave", "horus@xavier.edu", "John", "Bill"));
+            Assert.True(sqlHandler.CreateAccount("Donny", "Dave", "horus@xavier.edu", "John", "Bill"));
         }
 
         [Test]

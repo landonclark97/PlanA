@@ -10,6 +10,8 @@ namespace PlanA
     {
         // class-level declarations
 
+        static public string username;
+
         public static SQLHandler sqlHandler = new SQLHandler("applicationdatabase.crzemhmmicsu.us-east-2.rds.amazonaws.com", "3306", "PlanA", "planA", "shalyssa");
 
         UIWindow window;

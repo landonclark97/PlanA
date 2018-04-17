@@ -29,6 +29,7 @@ namespace PlanA
                     PasswordText.ResignFirstResponder();
                     UsernameText.ResignFirstResponder();
 
+                    AppDelegate.username = username;
 
                     return true;
 
@@ -49,5 +50,6 @@ namespace PlanA
 
             return base.ShouldPerformSegue(segueIdentifier, sender);
         }
-    }
+
+	}
 }

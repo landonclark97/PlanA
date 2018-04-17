@@ -1,119 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="769">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="769">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Controller-->
         <scene sceneID="768">
             <objects>
-                <tabBarController id="769" sceneMemberID="viewController" storyboardIdentifier="TabController" useStoryboardIdentifierAsRestorationIdentifier="YES" customClass="TabController">
+                <tabBarController storyboardIdentifier="TabController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="769" customClass="TabController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="772">
                         <rect key="frame" x="0.0" y="687" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue id="5732" destination="5548" kind="relationship" relationship="viewControllers"/>
-                        <segue id="5808" destination="5590" kind="relationship" relationship="viewControllers"/>
+                        <segue destination="5548" kind="relationship" relationship="viewControllers" id="5732"/>
+                        <segue destination="5590" kind="relationship" relationship="viewControllers" id="5808"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="773" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-981" y="857"/>
         </scene>
+        <!--Home-->
         <scene sceneID="5547">
             <objects>
                 <navigationController id="5548" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="5731"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5550">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue id="6199" destination="5949" kind="relationship" relationship="rootViewController"/>
+                        <segue destination="5949" kind="relationship" relationship="rootViewController" id="6199"/>
                     </connections>
-                    <tabBarItem key="tabBarItem" title="Home" id="5731"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5551" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-128" y="238"/>
         </scene>
+        <!--Events-->
         <scene sceneID="5589">
             <objects>
                 <navigationController id="5590" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Events" id="5807"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5592">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue id="6564" destination="5876" kind="relationship" relationship="rootViewController"/>
+                        <segue destination="5876" kind="relationship" relationship="rootViewController" id="6564"/>
                     </connections>
-                    <tabBarItem key="tabBarItem" title="Events" id="5807"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5593" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-134" y="1310"/>
         </scene>
+        <!--Events-->
         <scene sceneID="5875">
             <objects>
-                <tableViewController id="5876" sceneMemberID="viewController" customClass="EventsController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5877" restorationIdentifier="EventsTableView" customClass="EventsTableView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5880">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5880" id="5881">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="5876" id="5878"/>
-                            <outlet property="delegate" destination="5876" id="5879"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem title="Events" id="6264" key="navigationItem"/>
-                    <connections>
-                        <outlet property="EventsTableView" destination="5877" id="name-outlet-5877"/>
-                    </connections>
+                <tableViewController id="5876" customClass="EventsController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Events" id="6264"/>
+                    <connections/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5882" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="493" y="1301"/>
         </scene>
+        <!--Home-->
         <scene sceneID="5948">
             <objects>
-                <tableViewController id="5949" sceneMemberID="viewController" customClass="HomeController" storyboardIdentifier="HomeController" useStoryboardIdentifierAsRestorationIdentifier="YES">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5950" restorationIdentifier="HomeTableView">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5953">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5953" id="5954">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="5949" id="5951"/>
-                            <outlet property="delegate" destination="5949" id="5952"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem title="Home" id="6198" key="navigationItem"/>
-                    <connections>
-                        <outlet property="HomeTableView" destination="5950" id="name-outlet-5950"/>
-                    </connections>
+                <tableViewController storyboardIdentifier="HomeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5949" customClass="HomeController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Home" id="6198"/>
+                    <connections/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5955" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
