@@ -33,7 +33,7 @@ namespace PlanA
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             UITableViewCell cell = tableView.DequeueReusableCell(CellIdentifier);
-            string item = TableItems[indexPath.Row,0] + ": " + TableItems[indexPath.Row, 1];
+            string item = TableItems[indexPath.Row,0];
 
             //---- if there are no cells to reuse, create a new one
             if (cell == null)
@@ -46,10 +46,21 @@ namespace PlanA
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            UIAlertController okAlertController = UIAlertController.Create("Row Selected", TableItems[indexPath.Row,0], UIAlertControllerStyle.Alert);
+            /*UIAlertController okAlertController = UIAlertController.Create("Row Selected", TableItems[indexPath.Row,0], UIAlertControllerStyle.Alert);
             okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
             owner.PresentViewController(okAlertController, true, null);
-            tableView.DeselectRow(indexPath, true);
+            tableView.DeselectRow(indexPath, true);*/
+
+            UIStoryboard board = owner.Storyboard;
+
+            //UIViewController controller = board.InstantiateViewController("DisplayEventController") as UIViewController;
+
+            var selectedEvent = (DisplayEventController)board.InstantiateViewController("DisplayEventController");
+
+            selectedEvent.EventID = TableItems[indexPath.Row, 1];
+
+            owner.NavigationController.PushViewController(selectedEvent, true);
+
         }
     }
 }
