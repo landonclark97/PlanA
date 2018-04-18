@@ -46,14 +46,9 @@ namespace PlanA
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            /*UIAlertController okAlertController = UIAlertController.Create("Row Selected", TableItems[indexPath.Row,0], UIAlertControllerStyle.Alert);
-            okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
-            owner.PresentViewController(okAlertController, true, null);
-            tableView.DeselectRow(indexPath, true);*/
-
             UIStoryboard board = owner.Storyboard;
 
-            //UIViewController controller = board.InstantiateViewController("DisplayEventController") as UIViewController;
+          
 
             var selectedEvent = (DisplayEventController)board.InstantiateViewController("DisplayEventController");
 
