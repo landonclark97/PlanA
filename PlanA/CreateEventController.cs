@@ -1,11 +1,14 @@
 using Foundation;
 using System;
 using UIKit;
+using System.Collections.Generic;
 
 namespace PlanA
 {
     public partial class CreateEventController : UIViewController
     {
+        List<string> times = new List<string>();
+
         public CreateEventController (IntPtr handle) : base (handle)
         {
         }
@@ -14,17 +17,24 @@ namespace PlanA
         {
         }
 
-        public override bool ShouldPerformSegue(string segueIdentifier, NSObject sender)
+        partial void AddButton_TouchUpInside(UIKit.UIButton sender)
+        {
+            times.Add(DatesText.Text);
+            DatesText.Text = "";
+        }
+
+
+
+		public override bool ShouldPerformSegue(string segueIdentifier, NSObject sender)
         {
             if (segueIdentifier == "CEtoHome")
             {
                 var en = EventNameText.Text;
                 var des = DescriptionText.Text;
                 var loc = LocationText.Text;
-                var dts = DatesText.Text;
   
 
-                if (AppDelegate.sqlHandler.createEvent(AppDelegate.username, en, des, loc, dts))
+                if (AppDelegate.sqlHandler.createEvent(AppDelegate.username, en, des, loc, times))
                 {
                     EventNameText.ResignFirstResponder();
                     DescriptionText.ResignFirstResponder();
@@ -41,5 +51,6 @@ namespace PlanA
 
             return base.ShouldPerformSegue(segueIdentifier, sender);
         }
+
     }
 }

@@ -11,17 +11,9 @@ using UIKit;
 
 namespace PlanA
 {
-    [Register ("DisplayEventController")]
-    partial class DisplayEventController
+    [Register ("DisplayClosedEventController")]
+    partial class DisplayClosedEventController
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton CloseButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel CloseLabel { get; set; }
-
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel DescriptionLabel { get; set; }
@@ -36,32 +28,14 @@ namespace PlanA
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel UsernameLabel { get; set; }
+        UIKit.UILabel TimeLabel { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton VoteButton { get; set; }
-
-        [Action ("CloseButton_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void CloseButton_TouchUpInside (UIKit.UIButton sender);
-
-        [Action ("VoteButton_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void VoteButton_TouchUpInside (UIKit.UIButton sender);
+        UIKit.UILabel UsernameLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (CloseButton != null) {
-                CloseButton.Dispose ();
-                CloseButton = null;
-            }
-
-            if (CloseLabel != null) {
-                CloseLabel.Dispose ();
-                CloseLabel = null;
-            }
-
             if (DescriptionLabel != null) {
                 DescriptionLabel.Dispose ();
                 DescriptionLabel = null;
@@ -77,14 +51,14 @@ namespace PlanA
                 LocationLabel = null;
             }
 
+            if (TimeLabel != null) {
+                TimeLabel.Dispose ();
+                TimeLabel = null;
+            }
+
             if (UsernameLabel != null) {
                 UsernameLabel.Dispose ();
                 UsernameLabel = null;
-            }
-
-            if (VoteButton != null) {
-                VoteButton.Dispose ();
-                VoteButton = null;
             }
         }
     }

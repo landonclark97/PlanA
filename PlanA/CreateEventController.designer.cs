@@ -38,6 +38,14 @@ namespace PlanA
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton SubmitEventButton { get; set; }
 
+        [Action ("AddButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void AddButton_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("AddButtonPressed:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void AddButtonPressed (UIKit.UIButton sender);
+
         [Action ("SubmitEventButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void SubmitEventButton_TouchUpInside (UIKit.UIButton sender);

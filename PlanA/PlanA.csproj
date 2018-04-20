@@ -124,9 +124,6 @@
     <Compile Include="SQLHandler.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="Timeslot.cs" />
-    <Compile Include="MessageBoard.cs" />
-    <Compile Include="Message.cs" />
     <Compile Include="HomeController.cs" />
     <Compile Include="HomeController.designer.cs">
       <DependentUpon>HomeController.cs</DependentUpon>
@@ -143,6 +140,16 @@
     <Compile Include="CreateEventController.cs" />
     <Compile Include="CreateEventController.designer.cs">
       <DependentUpon>CreateEventController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeTableSource.cs" />
+    <Compile Include="TimesListController.cs" />
+    <Compile Include="TimesListController.designer.cs">
+      <DependentUpon>TimesListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimesTableSource.cs" />
+    <Compile Include="DisplayClosedEventController.cs" />
+    <Compile Include="DisplayClosedEventController.designer.cs">
+      <DependentUpon>DisplayClosedEventController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

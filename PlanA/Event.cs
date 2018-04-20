@@ -10,7 +10,7 @@ namespace PlanA
         int EventID { get; set; }
         string Location { get; set; }
         string Description { get; set; }
-        DateTime Datetime { get; set; }
+        List<string> Datetime { get; set; }
 
 
         /*User Creator { get; set; }
