@@ -17,81 +17,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="UsernameText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="209">
-                                <rect key="frame" x="80" y="189" width="257" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UsernameText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="209">
+                                <rect key="frame" x="90" y="189" width="257" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="13657" firstAttribute="width" constant="257"/>
+                                </constraints>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="PasswordText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="213">
-                                <rect key="frame" x="80" y="285" width="257" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PasswordText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="213">
+                                <rect key="frame" x="90" y="285" width="257" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <constraints>
+                                    <constraint id="13660" firstAttribute="width" constant="257"/>
+                                </constraints>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="SubmitButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="217">
-                                <rect key="frame" x="168" y="340" width="78" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="SubmitButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="217">
+                                <rect key="frame" x="179" y="340" width="78" height="56"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <segue destination="896" kind="show" identifier="SegueToHomepage" id="943"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="13663" firstAttribute="width" constant="78"/>
+                                    <constraint id="13664" firstAttribute="height" constant="56"/>
+                                </constraints>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="PlanATitle" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="221">
-                                <rect key="frame" x="132" y="61" width="151" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="PlanA">
-                                        <attributes>
-                                            <color key="NSColor" red="0.086274509803921567" green="0.086274509803921567" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="47" name="Avenir-Black"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="ErrorLabel" text="Error: username and password combination invalid." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="225">
-                                <rect key="frame" x="80" y="497" width="255" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="ErrorLabel" text="Error: username and password combination invalid." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="225">
+                                <rect key="frame" x="90" y="497" width="255" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="13667" firstAttribute="width" constant="255"/>
+                                    <constraint id="13668" firstAttribute="height" constant="66"/>
+                                </constraints>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="UsernameLabel" text="Enter Valid Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4766">
-                                <rect key="frame" x="116" y="145" width="184" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="UsernameLabel" text="Enter Valid Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4766">
+                                <rect key="frame" x="126" y="145" width="184" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="13671" firstAttribute="width" constant="184"/>
+                                    <constraint id="13672" firstAttribute="height" constant="21"/>
+                                </constraints>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="PasswordLabel" text="Enter Password Here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4783">
-                                <rect key="frame" x="116" y="246" width="183" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="PasswordLabel" text="Enter Password Here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4783">
+                                <rect key="frame" x="126" y="246" width="183" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="13675" firstAttribute="width" constant="183"/>
+                                    <constraint id="13676" firstAttribute="height" constant="21"/>
+                                </constraints>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="CreateAccountButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6454">
-                                <rect key="frame" x="120" y="399" width="176" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="CreateAccountButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6454">
+                                <rect key="frame" x="130" y="399" width="176" height="62"/>
                                 <state key="normal" title="Create New Account"/>
                                 <connections>
                                     <action selector="CreateAccountButton_TouchUpInside:" destination="202" eventType="touchUpInside" id="6712"/>
                                     <segue destination="2893" kind="show" identifier="SegueToCA" id="6919"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="13679" firstAttribute="width" constant="176"/>
+                                    <constraint id="13680" firstAttribute="height" constant="62"/>
+                                </constraints>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="11771" translatesAutoresizingMaskIntoConstraints="NO" image="Plan A Logo.jpg">
+                                <rect key="frame" x="101" y="42" width="234" height="95"/>
+                                <constraints>
+                                    <constraint id="13683" firstAttribute="width" constant="234"/>
+                                    <constraint id="13684" firstAttribute="height" constant="95"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint id="13655" firstItem="203" firstAttribute="trailing" secondItem="209" secondAttribute="trailing" constant="67"/>
+                            <constraint id="13656" firstItem="209" firstAttribute="top" secondItem="203" secondAttribute="top" constant="189"/>
+                            <constraint id="13658" firstItem="203" firstAttribute="trailing" secondItem="213" secondAttribute="trailing" constant="67"/>
+                            <constraint id="13659" firstItem="213" firstAttribute="top" secondItem="203" secondAttribute="top" constant="285"/>
+                            <constraint id="13661" firstItem="203" firstAttribute="trailing" secondItem="217" secondAttribute="trailing" constant="157"/>
+                            <constraint id="13662" firstItem="203" firstAttribute="bottom" secondItem="217" secondAttribute="bottom" constant="340"/>
+                            <constraint id="13665" firstItem="203" firstAttribute="trailing" secondItem="225" secondAttribute="trailing" constant="69"/>
+                            <constraint id="13666" firstItem="203" firstAttribute="bottom" secondItem="225" secondAttribute="bottom" constant="173"/>
+                            <constraint id="13669" firstItem="203" firstAttribute="trailing" secondItem="4766" secondAttribute="trailing" constant="104"/>
+                            <constraint id="13670" firstItem="4766" firstAttribute="top" secondItem="203" secondAttribute="top" constant="145"/>
+                            <constraint id="13673" firstItem="203" firstAttribute="trailing" secondItem="4783" secondAttribute="trailing" constant="105"/>
+                            <constraint id="13674" firstItem="4783" firstAttribute="top" secondItem="203" secondAttribute="top" constant="246"/>
+                            <constraint id="13677" firstItem="203" firstAttribute="trailing" secondItem="6454" secondAttribute="trailing" constant="108"/>
+                            <constraint id="13678" firstItem="203" firstAttribute="bottom" secondItem="6454" secondAttribute="bottom" constant="275"/>
+                            <constraint id="13681" firstItem="203" firstAttribute="trailing" secondItem="11771" secondAttribute="trailing" constant="79"/>
+                            <constraint id="13682" firstItem="11771" firstAttribute="top" secondItem="203" secondAttribute="top" constant="42"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="CreateAccountButton" destination="6454" id="name-outlet-6454"/>
                         <outlet property="ErrorLabel" destination="225" id="name-outlet-225"/>
                         <outlet property="PasswordLabel" destination="4783" id="name-outlet-4783"/>
                         <outlet property="PasswordText" destination="213" id="name-outlet-213"/>
-                        <outlet property="PlanATitle" destination="221" id="name-outlet-221"/>
                         <outlet property="SubmitButton" destination="217" id="name-outlet-217"/>
                         <outlet property="UsernameLabel" destination="4766" id="name-outlet-4766"/>
                         <outlet property="UsernameText" destination="209" id="name-outlet-209"/>
@@ -121,114 +150,171 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="PlanATitle" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3143">
-                                <rect key="frame" x="132" y="61" width="151" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="PlanA">
-                                        <attributes>
-                                            <color key="NSColor" red="0.086274509803921567" green="0.086274509803921567" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="47" name="Avenir-Black"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="CALabel" text="Create Your Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3152">
-                                <rect key="frame" x="129" y="133" width="156" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="CALabel" text="Create Your Account" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3152">
+                                <rect key="frame" x="139" y="133" width="156" height="60"/>
                                 <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="13720" firstAttribute="width" constant="156"/>
+                                    <constraint id="13721" firstAttribute="height" constant="60"/>
+                                </constraints>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="NewUsernameText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3257">
-                                <rect key="frame" x="66" y="395" width="268" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NewUsernameText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3257">
+                                <rect key="frame" x="83" y="395" width="268" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="13724" firstAttribute="width" constant="268"/>
+                                </constraints>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="EmailText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3266">
-                                <rect key="frame" x="71" y="469" width="268" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="EmailText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3266">
+                                <rect key="frame" x="83" y="469" width="268" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="13727" firstAttribute="width" constant="268"/>
+                                </constraints>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="UsernameLabel" text="Enter Valid Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3299">
-                                <rect key="frame" x="108" y="358" width="184" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="UsernameLabel" text="Enter Valid Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3299">
+                                <rect key="frame" x="125" y="358" width="184" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="13730" firstAttribute="width" constant="184"/>
+                                    <constraint id="13731" firstAttribute="height" constant="21"/>
+                                </constraints>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="EmailLabel" text="Enter Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3308">
-                                <rect key="frame" x="108" y="440" width="183" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="EmailLabel" text="Enter Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3308">
+                                <rect key="frame" x="126" y="440" width="183" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="13734" firstAttribute="width" constant="183"/>
+                                    <constraint id="13735" firstAttribute="height" constant="21"/>
+                                </constraints>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="EnterPasswordLabel" text="Enter Password Here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4221">
-                                <rect key="frame" x="97" y="507" width="206" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="EnterPasswordLabel" text="Enter Password Here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4221">
+                                <rect key="frame" x="114" y="507" width="206" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="13738" firstAttribute="width" constant="206"/>
+                                    <constraint id="13739" firstAttribute="height" constant="21"/>
+                                </constraints>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="NewPasswordText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4334">
-                                <rect key="frame" x="71" y="536" width="268" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NewPasswordText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4334">
+                                <rect key="frame" x="83" y="536" width="268" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="13742" firstAttribute="width" constant="268"/>
+                                </constraints>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="CreateButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4856">
-                                <rect key="frame" x="163" y="568" width="84" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="CreateButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4856">
+                                <rect key="frame" x="175" y="568" width="84" height="55"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <segue destination="202" kind="show" identifier="SegueToLogin" id="5025"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="13745" firstAttribute="width" constant="84"/>
+                                    <constraint id="13746" firstAttribute="height" constant="55"/>
+                                </constraints>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="ErrorLabel" text="Passwords do not match." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9447">
-                                <rect key="frame" x="81" y="631" width="238" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="ErrorLabel" text="Passwords do not match." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9447">
+                                <rect key="frame" x="98" y="631" width="238" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="13749" firstAttribute="width" constant="238"/>
+                                    <constraint id="13750" firstAttribute="height" constant="43"/>
+                                </constraints>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="FirstNameLabel" text="Enter First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11151">
-                                <rect key="frame" x="126" y="209" width="147" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="FirstNameLabel" text="Enter First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11151">
+                                <rect key="frame" x="144" y="209" width="147" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="13753" firstAttribute="width" constant="147"/>
+                                    <constraint id="13754" firstAttribute="height" constant="21"/>
+                                </constraints>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="FirstNameText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11192">
-                                <rect key="frame" x="66" y="238" width="268" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FirstNameText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11192">
+                                <rect key="frame" x="83" y="238" width="268" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="13757" firstAttribute="width" constant="268"/>
+                                </constraints>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="LastNameLabel" text="Enter Last Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11377">
-                                <rect key="frame" x="126" y="285" width="148" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="LastNameLabel" text="Enter Last Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11377">
+                                <rect key="frame" x="143" y="285" width="148" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <constraints>
+                                    <constraint id="13760" firstAttribute="width" constant="148"/>
+                                    <constraint id="13761" firstAttribute="height" constant="21"/>
+                                </constraints>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="LastNameText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11458">
-                                <rect key="frame" x="66" y="314" width="268" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LastNameText" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="11458">
+                                <rect key="frame" x="83" y="314" width="268" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <constraints>
+                                    <constraint id="13764" firstAttribute="width" constant="268"/>
+                                </constraints>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="11988" translatesAutoresizingMaskIntoConstraints="NO" image="Plan A Logo.jpg">
+                                <rect key="frame" x="100" y="44" width="234" height="95"/>
+                                <constraints>
+                                    <constraint id="13767" firstAttribute="width" constant="234"/>
+                                    <constraint id="13768" firstAttribute="height" constant="95"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint id="13718" firstItem="2894" firstAttribute="trailing" secondItem="3152" secondAttribute="trailing" constant="119"/>
+                            <constraint id="13719" firstItem="3152" firstAttribute="top" secondItem="2894" secondAttribute="top" constant="133"/>
+                            <constraint id="13722" firstItem="2894" firstAttribute="trailing" secondItem="3257" secondAttribute="trailing" constant="63"/>
+                            <constraint id="13723" firstItem="2894" firstAttribute="bottom" secondItem="3257" secondAttribute="bottom" constant="311"/>
+                            <constraint id="13725" firstItem="2894" firstAttribute="trailing" secondItem="3266" secondAttribute="trailing" constant="63"/>
+                            <constraint id="13726" firstItem="2894" firstAttribute="bottom" secondItem="3266" secondAttribute="bottom" constant="237"/>
+                            <constraint id="13728" firstItem="2894" firstAttribute="trailing" secondItem="3299" secondAttribute="trailing" constant="105"/>
+                            <constraint id="13729" firstItem="2894" firstAttribute="bottom" secondItem="3299" secondAttribute="bottom" constant="357"/>
+                            <constraint id="13732" firstItem="2894" firstAttribute="trailing" secondItem="3308" secondAttribute="trailing" constant="105"/>
+                            <constraint id="13733" firstItem="2894" firstAttribute="bottom" secondItem="3308" secondAttribute="bottom" constant="275"/>
+                            <constraint id="13736" firstItem="2894" firstAttribute="trailing" secondItem="4221" secondAttribute="trailing" constant="94"/>
+                            <constraint id="13737" firstItem="2894" firstAttribute="bottom" secondItem="4221" secondAttribute="bottom" constant="208"/>
+                            <constraint id="13740" firstItem="2894" firstAttribute="trailing" secondItem="4334" secondAttribute="trailing" constant="63"/>
+                            <constraint id="13741" firstItem="2894" firstAttribute="bottom" secondItem="4334" secondAttribute="bottom" constant="170"/>
+                            <constraint id="13743" firstItem="2894" firstAttribute="trailing" secondItem="4856" secondAttribute="trailing" constant="155"/>
+                            <constraint id="13744" firstItem="2894" firstAttribute="bottom" secondItem="4856" secondAttribute="bottom" constant="113"/>
+                            <constraint id="13747" firstItem="2894" firstAttribute="trailing" secondItem="9447" secondAttribute="trailing" constant="78"/>
+                            <constraint id="13748" firstItem="2894" firstAttribute="bottom" secondItem="9447" secondAttribute="bottom" constant="62"/>
+                            <constraint id="13751" firstItem="2894" firstAttribute="trailing" secondItem="11151" secondAttribute="trailing" constant="123"/>
+                            <constraint id="13752" firstItem="11151" firstAttribute="top" secondItem="2894" secondAttribute="top" constant="209"/>
+                            <constraint id="13755" firstItem="2894" firstAttribute="trailing" secondItem="11192" secondAttribute="trailing" constant="63"/>
+                            <constraint id="13756" firstItem="11192" firstAttribute="top" secondItem="2894" secondAttribute="top" constant="238"/>
+                            <constraint id="13758" firstItem="2894" firstAttribute="trailing" secondItem="11377" secondAttribute="trailing" constant="123"/>
+                            <constraint id="13759" firstItem="11377" firstAttribute="top" secondItem="2894" secondAttribute="top" constant="285"/>
+                            <constraint id="13762" firstItem="2894" firstAttribute="trailing" secondItem="11458" secondAttribute="trailing" constant="63"/>
+                            <constraint id="13763" firstItem="11458" firstAttribute="top" secondItem="2894" secondAttribute="top" constant="314"/>
+                            <constraint id="13765" firstItem="2894" firstAttribute="trailing" secondItem="11988" secondAttribute="trailing" constant="80"/>
+                            <constraint id="13766" firstItem="11988" firstAttribute="top" secondItem="2894" secondAttribute="top" constant="44"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="CALabel" destination="3152" id="name-outlet-3152"/>
@@ -243,7 +329,6 @@
                         <outlet property="LastNameText" destination="11458" id="name-outlet-11458"/>
                         <outlet property="NewPasswordText" destination="4334" id="name-outlet-4334"/>
                         <outlet property="NewUsernameText" destination="3257" id="name-outlet-3257"/>
-                        <outlet property="PlanATitle" destination="3143" id="name-outlet-3143"/>
                         <outlet property="UsernameLabel" destination="3299" id="name-outlet-3299"/>
                     </connections>
                 </viewController>
@@ -252,4 +337,7 @@
             <point key="canvasLocation" x="676" y="180"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Plan A Logo.jpg" width="852" height="313"/>
+    </resources>
 </document>

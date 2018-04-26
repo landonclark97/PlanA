@@ -20,6 +20,7 @@ namespace PlanA
         partial void AddButton_TouchUpInside(UIKit.UIButton sender)
         {
             times.Add(DatesText.Text);
+            AddedTimesTextView.Text += DatesText.Text + Environment.NewLine;
             DatesText.Text = "";
         }
 

@@ -32,10 +32,6 @@ namespace PlanA
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel PlanATitle { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton SubmitButton { get; set; }
 
         [Outlet]
@@ -70,11 +66,6 @@ namespace PlanA
             if (PasswordText != null) {
                 PasswordText.Dispose ();
                 PasswordText = null;
-            }
-
-            if (PlanATitle != null) {
-                PlanATitle.Dispose ();
-                PlanATitle = null;
             }
 
             if (SubmitButton != null) {

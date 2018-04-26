@@ -20,6 +20,10 @@ namespace PlanA
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextView AddedTimesTextView { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField DatesText { get; set; }
 
         [Outlet]
@@ -55,6 +59,11 @@ namespace PlanA
             if (AddButton != null) {
                 AddButton.Dispose ();
                 AddButton = null;
+            }
+
+            if (AddedTimesTextView != null) {
+                AddedTimesTextView.Dispose ();
+                AddedTimesTextView = null;
             }
 
             if (DatesText != null) {

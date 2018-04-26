@@ -256,7 +256,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="11838" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" text="Dates:">
-                                <rect key="frame" x="50" y="428" width="73" height="21"/>
+                                <rect key="frame" x="50" y="399" width="73" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -284,14 +284,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="11842" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="DatesText" placeholder="Enter Dates">
-                                <rect key="frame" x="50" y="464" width="292" height="30"/>
+                                <rect key="frame" x="48" y="441" width="292" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="11843" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" restorationIdentifier="AddButton">
-                                <rect key="frame" x="114" y="523" width="150" height="30"/>
+                                <rect key="frame" x="339" y="441" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
@@ -308,6 +308,13 @@
                                     <segue id="12771" destination="769" kind="show" identifier="CEtoHome"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="25982" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="50" y="490" width="294" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                     </view>
                     <tabBarItem key="tabBarItem" title="Create Event" id="11823"/>
@@ -319,6 +326,7 @@
                         <outlet property="DatesText" destination="11842" id="name-outlet-11842"/>
                         <outlet property="AddButton" destination="11843" id="name-outlet-11843"/>
                         <outlet property="SubmitEventButton" destination="11844" id="name-outlet-11844"/>
+                        <outlet property="AddedTimesTextView" destination="25982" id="name-outlet-25982"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11790" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -490,4 +498,7 @@
             <point key="canvasLocation" x="-319" y="2383"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Plan A Logo.jpg" width="852" height="313"/>
+    </resources>
 </document>

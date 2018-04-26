@@ -24,4 +24,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Plan A Logo.jpg" width="852" height="313"/>
+    </resources>
 </document>

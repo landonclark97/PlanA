@@ -20,15 +20,23 @@ namespace PlanA
                 var pw = NewPasswordText.Text;
                 var email = EmailText.Text;
 
-                if (AppDelegate.sqlHandler.CreateAccount(un, pw, email, fn, ln))
+                if(un.Length > 0 && pw.Length > 0)
                 {
-                    FirstNameText.ResignFirstResponder();
-                    LastNameText.ResignFirstResponder();
-                    NewUsernameText.ResignFirstResponder();
-                    NewPasswordText.ResignFirstResponder();
-                    EmailText.ResignFirstResponder();
+                    if (AppDelegate.sqlHandler.CreateAccount(un, pw, email, fn, ln))
+                    {
+                        FirstNameText.ResignFirstResponder();
+                        LastNameText.ResignFirstResponder();
+                        NewUsernameText.ResignFirstResponder();
+                        NewPasswordText.ResignFirstResponder();
+                        EmailText.ResignFirstResponder();
 
-                    return true;
+                        return true;
+                    }
+                    else
+                    {
+                        ErrorLabel.Hidden = false;
+                        return false;
+                    }
                 }
                 else
                 {

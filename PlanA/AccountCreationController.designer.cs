@@ -64,10 +64,6 @@ namespace PlanA
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel PlanATitle { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel UsernameLabel { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -130,11 +126,6 @@ namespace PlanA
             if (NewUsernameText != null) {
                 NewUsernameText.Dispose ();
                 NewUsernameText = null;
-            }
-
-            if (PlanATitle != null) {
-                PlanATitle.Dispose ();
-                PlanATitle = null;
             }
 
             if (UsernameLabel != null) {
