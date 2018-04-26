@@ -29,9 +29,10 @@ namespace PlanA
 
             //---- if there are no cells to reuse, create a new one
             if (cell == null)
-            { cell = new UITableViewCell(UITableViewCellStyle.Default, CellIdentifier); }
+            { cell = new UITableViewCell(UITableViewCellStyle.Subtitle, CellIdentifier); }
 
             cell.TextLabel.Text = item;
+            cell.DetailTextLabel.Text = AppDelegate.sqlHandler.getVotes(owner.EventID, item);
 
             return cell;
         }
@@ -39,6 +40,7 @@ namespace PlanA
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
             AppDelegate.sqlHandler.voteOnTime(owner.EventID, TableItems[indexPath.Row]);
+            tableView.ReloadData();
         }
     }
 }

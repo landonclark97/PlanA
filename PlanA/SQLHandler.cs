@@ -414,8 +414,6 @@ namespace PlanA
                 command.Parameters.AddWithValue("@dateTime", time);
                 command.Parameters.AddWithValue("@eventID", eventID);
                 command.ExecuteNonQuery();
-
-
             }
             catch (Exception e)
             {
@@ -651,5 +649,37 @@ namespace PlanA
 
             return names;
         }
+
+        public string getVotes(string eventID, string time)
+        {
+            string result = "";
+            if (sqlconn.State == ConnectionState.Closed)
+            {
+                sqlconn.Open();
+            }
+            try
+            {
+                string queryString = "select count(dateTime) as dateCount from Availability where eventID='" + eventID + "' and dateTime='" + time + "'";
+                MySqlCommand cmd = sqlconn.CreateCommand();
+                cmd.CommandText = queryString;
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                reader.Read();
+                System.Diagnostics.Debug.WriteLine(reader.GetString("dateCount").ToString());
+                result = reader.GetString("dateCount").ToString();
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.Message);
+            }
+            finally
+            {
+                sqlconn.Close();
+            }
+            return result;
+        }
     }
 }
+
+
