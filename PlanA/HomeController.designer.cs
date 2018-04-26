@@ -1,4 +1,3 @@
-
 // WARNING
 //
 // This file has been generated automatically by Visual Studio from the outlets and

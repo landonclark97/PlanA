@@ -24,6 +24,10 @@ namespace PlanA
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel JoinedUsersLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel LocationLabel { get; set; }
 
         [Outlet]
@@ -44,6 +48,11 @@ namespace PlanA
             if (EventNameLabel != null) {
                 EventNameLabel.Dispose ();
                 EventNameLabel = null;
+            }
+
+            if (JoinedUsersLabel != null) {
+                JoinedUsersLabel.Dispose ();
+                JoinedUsersLabel = null;
             }
 
             if (LocationLabel != null) {

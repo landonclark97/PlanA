@@ -4,13 +4,17 @@ using Foundation;
 
 namespace PlanA
 {
-    public class EventsTableSource : UITableViewSource
+    public class JoinedEventsTableSource : UITableViewSource
     {
-        EventsController owner;
+        public JoinedEventsTableSource()
+        {
+        }
+
+        JoinedEventsController owner;
         string[,] TableItems;
         string CellIdentifier = "TableCell";
 
-        public EventsTableSource(string[,] items, EventsController owner)
+        public JoinedEventsTableSource(string[,] items, JoinedEventsController owner)
         {
             TableItems = items;
             this.owner = owner;
@@ -20,9 +24,9 @@ namespace PlanA
         {
             int counter = 0;
             System.Diagnostics.Debug.WriteLine(TableItems.Length);
-            for (int i = 0; i < TableItems.Length/3; i++)
+            for (int i = 0; i < TableItems.Length / 3; i++)
             {
-                if(TableItems[i,0] != null)
+                if (TableItems[i, 0] != null)
                 {
                     counter++;
                 }
@@ -33,9 +37,9 @@ namespace PlanA
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             UITableViewCell cell = tableView.DequeueReusableCell(CellIdentifier);
-            string item = TableItems[indexPath.Row,0];
+            string item = TableItems[indexPath.Row, 0];
             string openStatus;
-            if(TableItems[indexPath.Row, 2].Equals("0"))
+            if (TableItems[indexPath.Row, 2].Equals("0"))
             {
                 openStatus = "Open";
             }
@@ -73,7 +77,7 @@ namespace PlanA
                 owner.NavigationController.PushViewController(selectedEvent, true);
             }
 
-            else if(eventInfo[6].Equals("1"))
+            else if (eventInfo[6].Equals("1"))
             {
                 var selectedEvent = (DisplayClosedEventController)board.InstantiateViewController("DisplayClosedEventController");
 

@@ -11,8 +11,8 @@ using UIKit;
 
 namespace PlanA
 {
-    [Register ("EventsController")]
-    partial class EventsController
+    [Register ("JoinedEventsController")]
+    partial class JoinedEventsController
     {
         void ReleaseDesignerOutlets ()
         {

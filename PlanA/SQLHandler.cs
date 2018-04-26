@@ -111,7 +111,7 @@ namespace PlanA
             string[,] names = null;
 
 
-            if(sqlconn.State == ConnectionState.Closed)
+            if (sqlconn.State == ConnectionState.Closed)
             {
                 sqlconn.Open();
             }
@@ -123,13 +123,13 @@ namespace PlanA
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                string[,] output = new string[30,3];
+                string[,] output = new string[30, 3];
 
                 int i = 0;
 
-                while(reader.Read())
+                while (reader.Read())
                 {
-                    output[i,0] = reader.GetString("eventName");
+                    output[i, 0] = reader.GetString("eventName");
                     i++;
                 }
 
@@ -197,7 +197,7 @@ namespace PlanA
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                while(reader.Read())
+                while (reader.Read())
                 {
                     info[0] = reader.GetString("username");
                     info[1] = reader.GetString("eventID");
@@ -238,7 +238,7 @@ namespace PlanA
                 command.Parameters.AddWithValue("@open", "0");
                 command.ExecuteNonQuery();
 
-                System.Diagnostics.Debug.WriteLine("Executed insert statement");
+                //System.Diagnostics.Debug.WriteLine("Executed insert statement");
 
                 sqlconn.Close();
 
@@ -255,15 +255,15 @@ namespace PlanA
 
                 while (reader.Read())
                 {
-                    System.Diagnostics.Debug.WriteLine("Iterating through reader");
+                    //System.Diagnostics.Debug.WriteLine("Iterating through reader");
                     eventID = reader.GetString("max(eventID)");
-                    System.Diagnostics.Debug.WriteLine("Should have recieved eventID");
+                    //System.Diagnostics.Debug.WriteLine("Should have recieved eventID");
                 }
 
-                System.Diagnostics.Debug.WriteLine(eventID);
+                //System.Diagnostics.Debug.WriteLine(eventID);
 
                 sqlconn.Close();
-                       
+
                 for (int i = 0; i < times.Count; i++)
                 {
                     sqlconn.Open();
@@ -401,6 +401,33 @@ namespace PlanA
             return times;
         }
 
+        public void voteOnTime(string eventID, string time)
+        {
+            if (sqlconn.State == ConnectionState.Closed)
+            {
+                sqlconn.Open();
+            }
+            try
+            {
+                MySqlCommand command = new MySqlCommand("insert into Availability (username,dateTime,eventID) values (@username,@dateTime,@eventID);", sqlconn);
+                command.Parameters.AddWithValue("@username", AppDelegate.username);
+                command.Parameters.AddWithValue("@dateTime", time);
+                command.Parameters.AddWithValue("@eventID", eventID);
+                command.ExecuteNonQuery();
+
+
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.Message);
+            }
+            finally
+            {
+                sqlconn.Close();
+            }
+
+        }
+
         public bool closeEvent(string eventID, string username)
         {
             bool success = false;
@@ -430,11 +457,11 @@ namespace PlanA
                     result = reader.GetString("open");
                 }
 
-                if(result.Equals("0"))
+                if (result.Equals("0"))
                 {
                     return false;
                 }
-                else if(result.Equals("1"))
+                else if (result.Equals("1"))
                 {
                     success = true;
                 }
@@ -450,6 +477,179 @@ namespace PlanA
             }
 
             return success;
+        }
+
+        public void chooseBestTime(string eventID)
+        {
+            if (sqlconn.State == ConnectionState.Closed)
+            {
+                sqlconn.Open();
+            }
+            try
+            {
+                string queryString = "select dateTime, count(dateTime) as dateCount from Availability where eventID='" + eventID + "' group by dateTime order by dateCount desc limit 1";
+                MySqlCommand cmd = sqlconn.CreateCommand();
+                cmd.CommandText = queryString;
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                reader.Read();
+                string result = reader.GetString("dateTime");
+
+                System.Diagnostics.Debug.WriteLine(result);
+
+                sqlconn.Close();
+
+                sqlconn.Open();
+
+                MySqlCommand command = new MySqlCommand("update Events set datetime='" + result + "' where eventID='" + eventID + "'", sqlconn);
+                command.Parameters.AddWithValue("@datetime", result);
+                command.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.Message);
+            }
+            finally
+            {
+                sqlconn.Close();
+            }
+        }
+
+        public bool joinEvent(string eventID)
+        {
+            if (sqlconn.State == ConnectionState.Closed)
+            {
+                sqlconn.Open();
+            }
+            try
+            {
+                string queryString = "select username from Events where eventID='" + eventID + "'";
+                MySqlCommand cmd = sqlconn.CreateCommand();
+                cmd.CommandText = queryString;
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                reader.Read();
+                if(reader.GetString("username").Equals(AppDelegate.username))
+                {
+                    return false;
+                }
+
+                sqlconn.Close();
+                sqlconn.Open();
+
+                MySqlCommand command = new MySqlCommand("insert into JoinedEvents (username,eventID) values (@username,@eventID);", sqlconn);
+                command.Parameters.AddWithValue("@username", AppDelegate.username);
+                command.Parameters.AddWithValue("@eventID", eventID);
+                command.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.Message);
+            }
+            finally
+            {
+                sqlconn.Close();
+            }
+            return true;
+        }
+
+        public List<string> getJoinedUsers(string eventID)
+        {
+            List<string> jUsers = new List<string>();
+            if (sqlconn.State == ConnectionState.Closed)
+            {
+                sqlconn.Open();
+            }
+            try
+            {
+                string queryString = "select username from JoinedEvents where eventID='" + eventID + "'";
+                MySqlCommand cmd = sqlconn.CreateCommand();
+                cmd.CommandText = queryString;
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    jUsers.Add(reader.GetString("username"));
+                }
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.Message);
+            }
+            finally
+            {
+                sqlconn.Close();
+            }
+            return jUsers;
+        }
+
+        public string[,] getJoinedEvents(string username)
+        {
+            string[,] names = new string[100,3];
+
+            if (sqlconn.State == ConnectionState.Closed)
+            {
+                sqlconn.Open();
+            }
+            try
+            {
+                string queryString = "select eventID from JoinedEvents where username='" + username + "'";
+                MySqlCommand cmd = sqlconn.CreateCommand();
+                cmd.CommandText = queryString;
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                List<string> eventIDs = new List<string>();
+
+                while (reader.Read())
+                {
+                    System.Diagnostics.Debug.WriteLine("Adding event IDs.");
+                    eventIDs.Add(reader.GetString("eventID"));
+                }
+
+                System.Diagnostics.Debug.WriteLine(eventIDs);
+
+                sqlconn.Close();
+
+                for (int i = 0; i < eventIDs.Count; i++)
+                {
+                    sqlconn.Open();
+
+                    System.Diagnostics.Debug.WriteLine("Finding info for event " + eventIDs[i] + " now.");
+                    string queryString2 = "select * from Events where eventID='" + eventIDs[i] + "'";
+                    MySqlCommand cmd2 = sqlconn.CreateCommand();
+                    cmd2.CommandText = queryString2;
+
+                    MySqlDataReader reader2 = cmd2.ExecuteReader();
+
+                    while(reader2.Read())
+                    {
+                        names[i, 0] = reader2.GetString("eventName");
+                        names[i, 1] = eventIDs[i];
+                        names[i, 2] = reader2.GetString("open");
+                        System.Diagnostics.Debug.WriteLine(names[i, 0]);
+                        System.Diagnostics.Debug.WriteLine(names[i, 1]);
+                        System.Diagnostics.Debug.WriteLine(names[i, 2]);
+                    }
+
+                    sqlconn.Close();
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.Write(e.Message);
+            }
+            finally
+            {
+                sqlconn.Close();
+            }
+
+            return names;
         }
     }
 }

@@ -15,10 +15,24 @@ namespace PlanA
         {
         }
 
+        partial void JoinButton_TouchUpInside(UIButton sender)
+        {
+            if (AppDelegate.sqlHandler.joinEvent(EventID))
+            {
+                JoinErrorLabel.Hidden = true;
+                JoinedLabel.Hidden = false;
+            }
+            else
+            {
+                JoinErrorLabel.Hidden = false;
+            }
+        }
+
         partial void CloseButton_TouchUpInside(UIButton sender)
         {
             if(AppDelegate.sqlHandler.closeEvent(EventID, AppDelegate.username))
             {
+                AppDelegate.sqlHandler.chooseBestTime(EventID);
                 this.NavigationController.PopViewController(true);
             }
             else

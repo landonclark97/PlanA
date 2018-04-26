@@ -38,7 +38,7 @@ namespace PlanA
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            
+            AppDelegate.sqlHandler.voteOnTime(owner.EventID, TableItems[indexPath.Row]);
         }
     }
 }

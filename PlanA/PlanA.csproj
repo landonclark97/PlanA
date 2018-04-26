@@ -151,6 +151,11 @@
     <Compile Include="DisplayClosedEventController.designer.cs">
       <DependentUpon>DisplayClosedEventController.cs</DependentUpon>
     </Compile>
+    <Compile Include="JoinedEventsController.cs" />
+    <Compile Include="JoinedEventsController.designer.cs">
+      <DependentUpon>JoinedEventsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinedEventsTableSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
